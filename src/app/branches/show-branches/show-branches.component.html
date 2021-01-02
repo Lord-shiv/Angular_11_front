@@ -1,0 +1,51 @@
+<nav class="navbar">
+    <select class="drop-down" [(ngModel)]="selected" (ngModelChange)="onSelect(selected)">
+        <option class="option" *ngFor="let option of options" [value]="option">
+            {{ option }}
+        </option>
+    </select>
+    <p></p>
+    <!-- <div>Selected Option</div>
+    <div>{{ selected }}</div> -->
+    <div class="d-flex float-right">
+        <input type="text" class="form-control" placeholder="Search here" [(ngModel)]="branchName"
+            (ngModelChange)="Search()">
+    </div>
+</nav>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th (click)="sort('branchId')">ID<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                    fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+                    <path
+                        d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                </svg></th>
+            <th (click)="sort('ifsc_code')">IFSC<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                    fill="currentColor" class="bi bi-filter" viewBox="0 0 16 16">
+                    <path
+                        d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z" />
+                </svg></th>
+            <th>Branch</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>District</th>
+            <th>State</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr
+            *ngFor="let branch of selectedData | orderBy: key: reverse | filter: branchName | paginate : {itemsPerPage:5,currentPage:p};">
+            <td>{{ branch.branchId }}</td>
+            <td>{{ branch.ifsc_code}}</td>
+            <td>{{ branch.branch_name }}</td>
+            <td>{{ branch.address }}</td>
+            <td>{{ branch.city }}</td>
+            <td>{{ branch.district }}</td>
+            <td>{{ branch.state }}</td>
+        </tr>
+    </tbody>
+</table>
+<div class="pagination">
+    <pagination-controls class="my-pagination" (pageChange)="p = $event" previousLabel="Prev" nextLabel="Next">
+    </pagination-controls>
+</div>

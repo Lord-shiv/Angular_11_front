@@ -1,0 +1,64 @@
+table th{
+    background-color: rgba(150, 86, 252, 0.568);
+    font-weight: 600;
+}
+table{
+    position: relative;
+    margin: auto;
+    background-color: #F5F5F5;
+    color: #495057;
+    border: 1px solid #ced4da;
+    padding: 10px
+}
+
+.navbar{
+  padding-bottom: 20px;
+}
+
+.d-flex {
+    position: relative;
+  margin: auto;
+  width: auto;
+}
+
+.drop-down {
+  background-color: #fff;
+  border-color: #ced4da;
+  color: #495057;
+  border-style: solid;
+  outline: none;
+  padding: 5px;
+  border-radius: 5px;
+  position: relative;
+  margin: auto;
+  width: auto;
+}
+
+.pagination{
+  position: relative;
+  margin: auto;
+  padding-top: 25px;
+  width: 50%;
+}
+
+pagination-controls{
+  border: 1px solid #ced4da;
+  padding-top: 14px;
+  border-radius: 5px;
+  padding-right: 50px;
+  background-color: #fff;
+}
+
+.my-pagination /deep/ .ngx-pagination .current {
+  background: rgba(150, 86, 252, 0.733);
+}
+
+.pagination /deep/ .ngx-pagination a{
+  color: #495057 !important;
+}
+
+.pagination /deep/ .ngx-pagination li :focus{
+  outline: none !important;
+  border: none;
+}
+
