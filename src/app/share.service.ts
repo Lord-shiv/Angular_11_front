@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 })
 
 export class ShareService {
-  readonly APIUrl = "http://127.0.0.1:8000";
+  readonly APIUrl = "https://branches-shiv.herokuapp.com";
   readonly PhotoUrl = "http://127.0.0.1:8000/media/";
 
   constructor(private http: HttpClient) { }
