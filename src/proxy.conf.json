@@ -1,0 +1,9 @@
+{
+    "/api": {
+        "target": "https://branches-shiv.herokuapp.com",
+        "secure": false,
+        "pathRewrite": {
+            "^/api": ""
+        }
+    }
+}
