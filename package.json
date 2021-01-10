@@ -27,6 +27,7 @@
     "@angular/platform-browser-dynamic": "~11.0.5",
     "@angular/router": "~11.0.5",
     "bootstrap-icons": "^1.2.2",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "ng-multiselect-dropdown": "^0.2.14",
     "ng2-order-pipe": "^0.1.5",

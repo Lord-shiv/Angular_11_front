@@ -4,6 +4,8 @@
         "secure": false,
         "pathRewrite": {
             "^/api": "/branches/"
-        }
+        },
+        "changeOrigin": true,
+        "logLevel": "debug"
     }
 }

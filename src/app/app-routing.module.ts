@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { BranchesComponent } from './branches/branches.component';
+import { ShowBranchesComponent } from './branches/show-branches/show-branches.component';
 
 const routes: Routes = [
-  { path: 'branches', component: BranchesComponent },
+  { path: 'branches', component: ShowBranchesComponent },
 ];
 
 @NgModule({
