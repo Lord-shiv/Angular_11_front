@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ShowBranchesComponent } from './branches/show-branches/show-branches.component';
 
 const routes: Routes = [
-  { path: 'branches', component: ShowBranchesComponent },
+  { path: '', component: ShowBranchesComponent },
 ];
 
 @NgModule({
